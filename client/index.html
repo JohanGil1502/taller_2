@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xd</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Información de los Servidores</h1>
+    <div class="container">
+      <div class="info-box">
+        <h3>Servidor 1: {{ servers[0].server }}</h3>
+        <ul>
+          <li v-for="(log, index) in servers[0].logs" :key="index">
+            {{ log }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h3>Servidor 2: {{ servers[1].server }}</h3>
+        <ul>
+          <li v-for="(log, index) in servers[1].logs" :key="index">
+            {{ log }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
